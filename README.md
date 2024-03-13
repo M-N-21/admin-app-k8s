@@ -38,7 +38,8 @@ il définit le service Kubernetes pour exposer MySQL.
 
 1. Assurez-vous que Kubernetes est correctement configuré et en cours d'exécution. Il daut donc au préalable installé minikube et le démarrer avec `minikube start`
 2. Utilisez `kubectl apply -f db-deployment.yaml` pour créer le déploiement MySQL.
-3. Utilisez `kubectl apply -f keycloak-deployment.yaml` pour créer le déploiement MySQL.
+3. Utilisez `kubectl apply -f keycloak-deployment.yaml` pour créer le déploiement Keycloak.
+4. Utilisez `kubectl apply -f app-deployment.yaml` pour créer le déploiement de l'application
 
 ## IMPORTANT
 Pour que la configuration passe, il est important que dans l'application springboot, au niveau de `src/main/resources/application.yml` de remplacer les hosts par les noms des services respectifs deployés dans kubenetes pour mysql et pour keycloak comme suit:
